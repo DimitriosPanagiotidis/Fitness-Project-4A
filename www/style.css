@@ -17,7 +17,7 @@ footer {
     background-color: #1c1c1c;
     color: #e6e6e6;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
     width: 100%;
     bottom: 0;
 }
@@ -27,28 +27,49 @@ footer {
 
 .navigation-bar {
     display: flex;
-    justify-content: center;
     align-items: center;
-}    
+    padding: 0 20px;
+    position: relative; /* allow absolute centering of nav-center */
+}
+
+.navigation-bar .nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-bar .nav-right {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .navigation-bar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 20px;
-    font-size: 25px;
-}    
+    font-size: 20px;
+    align-items: center;
+}
+
 .navigation-bar li {
     display: flex;
-}    
+}
+
 .navigation-bar a {
     text-decoration: none;
     color: #e6e6e6;
     font-weight: bold;
-}    
+    padding: 6px 8px;
+}
+
 .navigation-bar a:hover {
     color: #FF3B30;
-}    
+}
 
 .header-content {
     text-align: center;
@@ -238,7 +259,6 @@ footer {
 
 .contact-header {
     text-align: center;
-    padding: 20px 20px;
     color: #e6e6e6;
 }
 
@@ -295,4 +315,160 @@ footer {
     min-height: 100px;
     max-height: 300px;
     max-width: 100%;
+}
+
+.register-form-wrapper {
+    padding: 40px 20px;
+    text-align: center;
+    color: #e6e6e6;
+}
+.register-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    color: #e6e6e6;
+}
+.register-form h1 {
+    color: #FF3B30;
+    margin-bottom: 20px;
+}
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.register-form button {
+    background-color: #FF3B30;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+.register-form button:hover {
+    background-color: #e62e24;
+}
+.register-form input::placeholder {
+    color: #999;
+}
+
+.register-form select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form-wrapper {
+    padding: 40px 20px;
+    text-align: center;
+    color: #e6e6e6;
+}
+.login-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    color: #e6e6e6;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.login-form button {
+    background-color: #FF3B30;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+.login-form button:hover {
+    background-color: #e62e24;
+}
+.login-form input::placeholder {
+    color: #999;
+}
+
+.add_workout_wrapper{
+    padding: 40px 20px;
+    text-align: center;
+    color: #e6e6e6;
+}
+.add_workout {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    color: #e6e6e6;
+}
+.add_workout h1 {
+    color: #FF3B30;
+    margin-bottom: 20px;
+}
+.add_workout input,
+.add_workout textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.add_workout button {
+    background-color: #FF3B30;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+.add_workout button:hover {
+    background-color: #e62e24;
+}
+.add_workout input::placeholder,
+.add_workout textarea::placeholder {
+    color: #999;
+}
+.add_workout textarea {
+    resize: none;
+    min-height: 100px;
+    max-height: 300px;
+    max-width: 100%;
+}
+.add_workout select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    color: #333;
 }

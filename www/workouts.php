@@ -1,4 +1,6 @@
 <?php
+
+include 'session_check.php';
 require 'database.php';
 $sql = "SELECT * FROM workouts";
 
