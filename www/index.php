@@ -1,10 +1,12 @@
 <?php
 
+include 'session_check.php';
 require 'database.php';
 
 $sql = "SELECT * FROM workouts";
 $result = mysqli_query($conn, $sql);
 $workouts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
 
 ?>
 <!DOCTYPE html>
