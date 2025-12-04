@@ -1,4 +1,10 @@
 <?php
+session_start();
+if($_SERVER['REQUEST_METHOD'] != 'POST'){
+    echo "Invalid request method.";
+    echo "<a href='add_workout.php'> Go back to add workout</a>";
+    exit;
+}
 
 if(empty($_POST['title']) || empty($_POST['description']) || empty($_POST['difficulty'])
      || empty($_POST['duration']) || empty($_POST['added_at']) || !isset($_POST['note']) ) {

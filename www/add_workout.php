@@ -1,3 +1,11 @@
+<?php
+
+include 'session_check.php';
+require 'database.php';
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
