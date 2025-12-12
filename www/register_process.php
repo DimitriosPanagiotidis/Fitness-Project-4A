@@ -34,6 +34,7 @@ $sql = "INSERT INTO user (firstname, lastname, email, username, password, role)
         VALUES ('$firstname', '$lastname', '$email', '$username', '$password', '$role')";
 $result = mysqli_query($conn, $sql);
 
+
 if ($result) {
     echo "Registration successful. You can now <a href='login.php'> login</a>.";
 } else {

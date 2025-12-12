@@ -2,9 +2,6 @@
     <div class="nav-center">
         <ul>
             <?php
-            
-        
-       
             if (isset($_SESSION['user_id'])): ?>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="workouts.php">Workouts</a></li>

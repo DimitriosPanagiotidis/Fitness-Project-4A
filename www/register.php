@@ -27,8 +27,8 @@
             <div class="form-group">
                 <label for="role_form">Select your role</label>
                 <select name="role_form" id="role_form" required>
-                    <option value="Member">Member</option>
-                    <option value="teacher">Employee</option>
+                    <option value="member">Member</option>
+                    <option value="employee">Employee</option>
                 </select>
             </div>
             <button type="submit">Register</button>
