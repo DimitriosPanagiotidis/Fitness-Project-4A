@@ -35,8 +35,11 @@ $sql = "INSERT INTO user (firstname, lastname, email, username, password, role)
 $result = mysqli_query($conn, $sql);
 
 
+
 if ($result) {
-    echo "Registration successful. You can now <a href='login.php'> login</a>.";
+    // echo "Registration successful. You can now <a href='login.php'> login</a>.";
+     $last_id = mysqli_insert_id($conn);
+     echo "Registration successful. Your User ID is: " . $last_id;
 } else {
     echo "Error during registration: " . mysqli_error($conn);
     echo "<a href='register.php'> Go back to registration</a>";

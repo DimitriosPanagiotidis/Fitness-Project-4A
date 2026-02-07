@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb
--- Generation Time: Dec 04, 2025 at 06:29 PM
+-- Generation Time: Feb 07, 2026 at 10:10 PM
 -- Server version: 10.4.34-MariaDB-1:10.4.34+maria~ubu2004
--- PHP Version: 8.3.28
+-- PHP Version: 8.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,51 @@ SET time_zone = "+00:00";
 --
 -- Database: `project_4A`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `adress`
+--
+
+CREATE TABLE `adress` (
+  `id` int(11) NOT NULL,
+  `street` varchar(60) NOT NULL,
+  `house_number` varchar(10) NOT NULL,
+  `zipcode` varchar(10) NOT NULL,
+  `mobile` varchar(9) NOT NULL,
+  `phone` varchar(9) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(30) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `role` enum('member','employee') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `firstname`, `lastname`, `email`, `username`, `password`, `role`) VALUES
+(1, 'Dimitris', 'Panagiotidis', 'example@example.com', 'dimitris', '123456789', 'member'),
+(2, 'Dimitris', 'Panagiotidis', '203156@novacollege.nl', 'dimitris', '123456789', 'member'),
+(3, 'Dimitris', 'Panagiotidis', 'example@example.com', 'dimitris', '123456789', 'employee'),
+(4, 'Dimitris', 'Panagiotidis', 'asfd@gmail.com', 'Apostolis', '123456789', 'member'),
+(5, 'Dimitris', 'Panagiotidis', 'example@example.com', 'dimitris', '12345678945', 'member'),
+(6, 'Dimitris', 'Panagiotidis', 'example@example.com', 'dimitris', '12345678945111', 'member');
 
 -- --------------------------------------------------------
 
@@ -59,6 +104,18 @@ INSERT INTO `workouts` (`id`, `title`, `description`, `duration`, `difficulty`, 
 --
 
 --
+-- Indexes for table `adress`
+--
+ALTER TABLE `adress`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `workouts`
 --
 ALTER TABLE `workouts`
@@ -67,6 +124,18 @@ ALTER TABLE `workouts`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `adress`
+--
+ALTER TABLE `adress`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `workouts`
